@@ -1,4 +1,5 @@
-export function getRandomStringWithLength(length) {
+export function generateRandomString(length) {
+    length = length ?? 0;
     let randomStr = "";
     for (let i = 0; i < length; i++) {
         const offset = Math.floor(Math.random() * 26);

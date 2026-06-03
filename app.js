@@ -3,15 +3,15 @@
  * @returns {string} A greeting message.
  * @throws {Error} If no name is provided.
  */
-export function greetUser(name) {
-    if (!name) {
-        // return 'Provide a valid name';
-        throw new Error('Provide a valid name');
+export function greetUser(username) {
+    if (!username) {
+        throw new Error('Provide a username');
     }
-    return `Hello ${name}!`;
+    return `Hello ${username}!`;
 }
 
 // console.log(greetUser('Rashid'));
+// console.log(greetUser());
 
 /**
  * Validates a password against the application's security requirements.
