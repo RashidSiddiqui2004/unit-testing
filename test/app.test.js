@@ -26,7 +26,7 @@ suite('greet functionality', () => {
     test('should throw error if no name is provided', () => {
         assert.throws(() => greetUser(), {
             name: 'Error',
-            message: 'Provide a valid name',
+            message: 'Provide a username',
         });
     });
 });
@@ -53,7 +53,6 @@ describe('user password validation', () => {
         };
 
         const actualOutput = validatePassword(password);
-
         assert.deepEqual(actualOutput, expectedOutput);
     });
 

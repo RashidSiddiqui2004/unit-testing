@@ -23,7 +23,7 @@ export function greetUser(username) {
  * - Must contain at least one digit (`0-9`).
  * - Must not contain whitespace characters (spaces, tabs, or newlines).
  * - Must not contain any character repeated more than 3 times consecutively.
- * - Must not contain a sequence of 4 or more consecutive ascending characters.
+ * - Must not contain a sequence of 4 or more consecutive ascending / descending characters.
  *
  * @param {string} password - The password to validate.
  * @returns {{ isValid: boolean, error: string | null }}
@@ -107,6 +107,7 @@ export function validatePassword(password) {
     // check if the password contains >=4 ascending / descending characters
     // check every 4 len subarray
     const normalizedPassword = password.toLowerCase();
+    // abcd / aBcD
     for (let i = 0; i <= length - 4; i++) {
         const differences = [];
         for (let j = 1; j < 4; j++) {
